@@ -1,6 +1,7 @@
 import React from "react";
-import NavBar from "../../components/nav-bar/NavBar";
 import RightPanel from "../../components/RightPanel";
+import Form from "../../components/form-components/Form";
+import NavBar from "../../components/nav-bar/NavBar";
 import "../../stylesheets/form-pages.css";
 
 const PAGE = 1;
@@ -10,6 +11,7 @@ export default function PersonalInfo() {
     <div className="form-page-container">
       <section className="left-panel">
         <h1 className="header">Hey, Rocketeer, what are your coordinates?</h1>
+        <Form page={PAGE}/>
         <NavBar page={PAGE}/>
       </section>
       <section className="right-panel">

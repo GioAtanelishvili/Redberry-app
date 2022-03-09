@@ -1,7 +1,9 @@
 import React from "react";
 import RightPanel from "../../components/RightPanel";
-import "../../stylesheets/form-pages.css";
+import Form from "../../components/form-components/Form";
 import NavBar from "../../components/nav-bar/NavBar";
+import "../../stylesheets/form-pages.css";
+
 
 const PAGE = 3;
 
@@ -10,6 +12,7 @@ export default function Covid() {
     <div className="form-page-container">
       <section className="left-panel">
         <h1 className="header">Covid Stuff</h1>
+        <Form page={PAGE} />
         <NavBar page={PAGE} />
       </section>
       <section className="right-panel">

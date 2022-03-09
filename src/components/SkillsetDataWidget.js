@@ -9,8 +9,8 @@ export default function SkillsetDataWidget({
   handleRemove,
 }) {
   return (
-    <article className="skillset-widget">
-      <p className="widget-title">{language}</p>
+    <article className="skillset-data-widget">
+      <p>{language}</p>
       <p>Years of Experience: {experience}</p>
       <button>
         <img src={removeButton} alt={id} onClick={handleRemove} />

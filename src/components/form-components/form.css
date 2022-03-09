@@ -12,6 +12,16 @@
   font-family: var(--regular-font);
 }
 
+.form-container select {
+  appearance: none;
+  background-image: url("../../images/selectArrow.png");
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  color: #444;
+  font-style: italic;
+  cursor: pointer;
+}
+
 .form-container input::-webkit-input-placeholder {
   font-style: italic;
 }

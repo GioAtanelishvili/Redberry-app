@@ -39,7 +39,7 @@
   .left-panel,
   .right-panel {
     width: 100%;
-    overflow-y:initial;
+    overflow-y: initial;
   }
   .paragraph {
     padding: 3em 2em;

@@ -5,6 +5,7 @@ import InsightsForm from "./InsightsForm";
 import PersonalInfoForm from "./PersonalInfoForm";
 import SkillsetForm from "./SkillsetForm";
 import SubmitForm from "./SubmitForm";
+import "./form.css";
 
 export default function Form({ page }) {
   const [formToDisplay, setFormToDisplay] = useState();
@@ -21,7 +22,9 @@ export default function Form({ page }) {
   useEffect(() => {
     switch (page) {
       case 1:
-        setFormToDisplay(<PersonalInfoForm {...formData} handleChange={handleChange}/>);
+        setFormToDisplay(
+          <PersonalInfoForm {...formData} handleChange={handleChange} />
+        );
         break;
       case 2:
         setFormToDisplay(
@@ -46,9 +49,9 @@ export default function Form({ page }) {
     }
   }, [formData]);
 
-    const handleChange = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   return (
     <section className="form-container">

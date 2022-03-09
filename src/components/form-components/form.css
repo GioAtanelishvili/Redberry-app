@@ -1,0 +1,33 @@
+.form-container {
+  width: 70%;
+  margin: 4em auto 5em;
+}
+
+.form-container input,
+.form-container select {
+  display: block;
+  width: 100%;
+  margin: 2em auto;
+  padding: 1.3em 2em;
+  font-family: var(--regular-font);
+}
+
+.form-container input::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+.form-container .handle-add-button {
+  width: 50%;
+  margin-left: 50%;
+  background-color: var(--redberry-red);
+  border: none;
+  color: #fff;
+  padding: 1em 2em;
+  cursor: pointer;
+  font-family: var(--regular-font);
+}
+
+.form-container p {
+  margin: 1em 0 0.5em;
+  font-size: 1rem;
+}

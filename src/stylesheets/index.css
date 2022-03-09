@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Rowdies&display=swap");
+
+/* CSS variables */
+:root {
+  --redberry-red: #fe3b1f;
+  --header-font: "Rowdies";
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

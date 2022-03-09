@@ -1,0 +1,54 @@
+.home-page-container {
+  background-color: #000;
+  background-image: url("../images/stars.png");
+  background-repeat: repeat-y;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.greeting-message {
+  font-family: var(--header-font), sans-serif;
+  color: var(--redberry-red);
+  text-align: center;
+  font-size: 3.5rem;
+  padding-top: 1em;
+}
+
+.home-buttons-container {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  margin: 5em auto 0;
+  text-align: center;
+}
+
+.start-button {
+  display: block;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--redberry-red);
+  border: none;
+  border-radius: 50px;
+  padding: 0.8em 3em;
+  cursor: pointer;
+}
+
+.home-buttons-container a {
+  color: #fff;
+  display: inline-block;
+  margin: 1.5em auto 0;
+}
+
+@keyframes rotateRocketman {
+  50% {transform: rotate(-20deg);}
+}
+
+.rocketman-img {
+  width: 350px;
+  display: block;
+  margin: auto;
+  animation: rotateRocketman 5s infinite;
+}

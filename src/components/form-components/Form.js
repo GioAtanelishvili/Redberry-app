@@ -7,7 +7,7 @@ import SkillsetForm from "./SkillsetForm";
 import SubmitForm from "./SubmitForm";
 import "./form.css";
 
-export default function Form({ page }) {
+export default function Form({ page, setIsValidated, displayErrors }) {
   const [formToDisplay, setFormToDisplay] = useState();
   const [formData, setFormData] = useState(
     JSON.parse(localStorage.getItem("form_data")) || INITIAL_FORM_DATA
@@ -23,22 +23,42 @@ export default function Form({ page }) {
     switch (page) {
       case 1:
         setFormToDisplay(
-          <PersonalInfoForm {...formData} handleChange={handleChange} />
+          <PersonalInfoForm
+            {...formData}
+            handleChange={handleChange}
+            setIsValidated={setIsValidated}
+            displayErrors={displayErrors}
+          />
         );
         break;
       case 2:
         setFormToDisplay(
-          <SkillsetForm {...formData} handleChange={handleChange} />
+          <SkillsetForm
+            {...formData}
+            handleChange={handleChange}
+            setIsValidated={setIsValidated}
+            displayErrors={displayErrors}
+          />
         );
         break;
       case 3:
         setFormToDisplay(
-          <CovidForm {...formData} handleChange={handleChange} />
+          <CovidForm
+            {...formData}
+            handleChange={handleChange}
+            setIsValidated={setIsValidated}
+            displayErrors={displayErrors}
+          />
         );
         break;
       case 4:
         setFormToDisplay(
-          <InsightsForm {...formData} handleChange={handleChange} />
+          <InsightsForm
+            {...formData}
+            handleChange={handleChange}
+            setIsValidated={setIsValidated}
+            displayErrors={displayErrors}
+          />
         );
         break;
       case 5:
@@ -47,7 +67,7 @@ export default function Form({ page }) {
       default:
         setFormToDisplay();
     }
-  }, [formData]);
+  }, [formData, displayErrors]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });

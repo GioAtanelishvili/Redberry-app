@@ -6,14 +6,14 @@ export default function SkillsetDataWidget({
   id,
   language,
   experience,
-  handleRemove,
+  handleDeletion,
 }) {
   return (
     <article className="skillset-data-widget">
       <p>{language}</p>
       <p>Years of Experience: {experience}</p>
       <button>
-        <img src={removeButton} alt={id} onClick={handleRemove} />
+        <img src={removeButton} alt={id} onClick={handleDeletion} />
       </button>
     </article>
   );

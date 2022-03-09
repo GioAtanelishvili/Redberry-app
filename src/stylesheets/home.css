@@ -4,7 +4,7 @@
   background-repeat: repeat-y;
   position: fixed;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
 }
 

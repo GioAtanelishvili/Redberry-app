@@ -78,13 +78,16 @@ export default function Form({ page, setIsValidated, displayErrors }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(JSON.stringify(formData));
-    fetch("https://bootcamp-2022.devtest.ge/api/application", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      "https://bootcamp-2022.devtest.ge/api/application",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((response) => response.status)
       .then((status) => {
         if (status === 201) {

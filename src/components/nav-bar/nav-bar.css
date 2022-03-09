@@ -1,0 +1,43 @@
+.nav-bar {
+  position: fixed;
+  bottom: 2em;
+  width: 50%;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-bar li {
+  margin: 5px;
+  display: block;
+}
+
+.nav-bar button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.nav-button {
+  opacity: 0.5;
+}
+
+.nav-button:hover {
+  opacity: 1;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    transform: scale(1.5);
+  }
+}

@@ -52,6 +52,5 @@
   width: 350px;
   display: block;
   margin: auto;
-  position: relative;
   animation: rotateRocketman 5s infinite;
 }

@@ -21,16 +21,22 @@ export default function Form({ page }) {
   useEffect(() => {
     switch (page) {
       case 1:
-        setFormToDisplay(<PersonalInfoForm {...formData} />);
+        setFormToDisplay(<PersonalInfoForm {...formData} handleChange={handleChange}/>);
         break;
       case 2:
-        setFormToDisplay(<SkillsetForm {...formData} />);
+        setFormToDisplay(
+          <SkillsetForm {...formData} handleChange={handleChange} />
+        );
         break;
       case 3:
-        setFormToDisplay(<CovidForm {...formData} />);
+        setFormToDisplay(
+          <CovidForm {...formData} handleChange={handleChange} />
+        );
         break;
       case 4:
-        setFormToDisplay(<InsightsForm {...formData} />);
+        setFormToDisplay(
+          <InsightsForm {...formData} handleChange={handleChange} />
+        );
         break;
       case 5:
         setFormToDisplay(<SubmitForm {...formData} />);
@@ -39,6 +45,10 @@ export default function Form({ page }) {
         setFormToDisplay();
     }
   }, [formData]);
+
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
 
   return (
     <section className="form-container">

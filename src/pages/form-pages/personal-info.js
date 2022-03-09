@@ -11,7 +11,7 @@ export default function PersonalInfo() {
         <h1 className="header">Hey, Rocketeer, what are your coordinates?</h1>
       </section>
       <section className="right-panel">
-        <RightPanel page={PAGE} />
+        <RightPanel page={PAGE - 1} />
       </section>
     </div>
   );

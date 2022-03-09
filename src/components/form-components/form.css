@@ -1,6 +1,6 @@
 .form-container {
-  width: 70%;
-  margin: 4em auto 5em;
+  width: 60%;
+  margin: 2em auto 5em;
 }
 
 .form-container input,
@@ -42,25 +42,20 @@
   font-size: 1rem;
 }
 
-.covid-form-container input[type="radio"] {
+input[type="radio"] {
   width: auto;
-  display: inline;
   vertical-align: middle;
   margin: 1em;
-}
-
-.form-container label {
-  margin: 1em 0 0.5em;
-  font-size: 1rem;
-  display: inline;
-}
-
-.covid-form-container input[type="radio"] {
-  margin: 0.5em;
   display: inline-block;
   vertical-align: middle;
   transform: scale(0.9);
   cursor: pointer;
+}
+
+label {
+  margin: 1em 0 0.5em;
+  font-size: 1rem;
+  display: inline;
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -70,4 +65,11 @@
 
 ::-webkit-scrollbar-track {
   background-color: aqua;
+}
+
+textarea {
+  width: 70%;
+  height: 6em;
+  padding: 0.5em;
+  font-family: inherit;
 }

@@ -41,3 +41,33 @@
   margin: 1em 0 0.5em;
   font-size: 1rem;
 }
+
+.covid-form-container input[type="radio"] {
+  width: auto;
+  display: inline;
+  vertical-align: middle;
+  margin: 1em;
+}
+
+.form-container label {
+  margin: 1em 0 0.5em;
+  font-size: 1rem;
+  display: inline;
+}
+
+.covid-form-container input[type="radio"] {
+  margin: 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+  background-image: url("../../images/calendar.png");
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background-color: aqua;
+}

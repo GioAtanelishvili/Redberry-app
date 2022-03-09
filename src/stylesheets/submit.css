@@ -1,0 +1,35 @@
+.parent-container {
+  background-color: #000;
+  background-repeat: repeat-y;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.parent-container button[type="submit"] {
+    background-color: var(--redberry-red);
+    color: white;
+    border: 50px;
+    border-radius: 50px;
+    display: block;
+    margin: auto;
+    padding: 1.2em 3em;
+    font-size: 1.3rem;
+    margin-top: 10em;
+    font-family: var(--regular-font);
+    cursor: pointer;
+}
+
+.parent-container a {
+    color: #fff;
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.2rem;
+}
+
+.parent-container button[type="submit"]:hover, 
+.parent-container a:hover {
+    transform: scale(1.1);
+}

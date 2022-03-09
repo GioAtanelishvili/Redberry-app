@@ -62,7 +62,9 @@ export default function Form({ page, setIsValidated, displayErrors }) {
         );
         break;
       case 5:
-        setFormToDisplay(<SubmitForm {...formData} />);
+        setFormToDisplay(
+          <SubmitForm formData={formData} handleSubmit={handleSubmit} />
+        );
         break;
       default:
         setFormToDisplay();
@@ -71,6 +73,25 @@ export default function Form({ page, setIsValidated, displayErrors }) {
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(JSON.stringify(formData));
+    fetch("https://bootcamp-2022.devtest.ge/api/application", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.status)
+      .then((status) => {
+        if (status === 201) {
+          window.open("/thanks-message", "_self");
+        }
+      })
+      .catch((error) => console.error(error));
   };
 
   return (

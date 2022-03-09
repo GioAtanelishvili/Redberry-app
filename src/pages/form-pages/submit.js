@@ -1,5 +1,6 @@
 import React from "react";
 import Form from "../../components/form-components/Form";
+import "../../stylesheets/submit.css"
 
 const PAGE = 5;
 
